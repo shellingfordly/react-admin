@@ -1,0 +1,7 @@
+body {
+  background-image: url('./static/images/bg.jpg');
+}
+
+#root {
+  height: 100%
+}
