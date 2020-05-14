@@ -1,6 +1,7 @@
 ### react
 基于react的管理系统
-![admin](/img/admin.png)
+
+![admin](https://tva1.sinaimg.cn/large/007S8ZIlgy1ges0aj3autj31hc0qidgv.jpg)
 
 
 * 启动
