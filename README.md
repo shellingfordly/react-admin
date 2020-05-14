@@ -1,5 +1,7 @@
 ### react
 基于react的管理系统
+![admin](./img/admin.png)
+
 
 * 启动
 
