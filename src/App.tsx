@@ -1,8 +1,7 @@
+import Layout from './layouts'
 function App() {
   return (
-    <div className="App">
-      React Admin
-    </div>
+    <Layout />
   );
 }
 
