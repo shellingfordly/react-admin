@@ -1,7 +1,11 @@
 import Layout from './layouts'
+import './app.less'
+
 function App() {
   return (
-    <Layout />
+    <div className='app'>
+      <Layout />
+    </div>
   );
 }
 
