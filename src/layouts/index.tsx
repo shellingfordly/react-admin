@@ -1,13 +1,18 @@
-import Header from './header/Header'
-import Footer from './footer/Footer'
-import Content from './content/Content'
+import LayoutHeader from './header/Header'
+import LayoutFooter from './footer/Footer'
+import LayoutContent from './content/Content'
+import LayoutSider from './sider/Sider'
+import { Layout } from 'antd';
 
-export default function Layout() {
+export default function LayoutMain() {
   return (
-    <div>
-      <Header />
-      <Content />
-      <Footer />
-    </div>
+    <Layout style={{ minHeight: '100vh' }}>
+      <LayoutSider />
+      <Layout>
+        <LayoutHeader />
+        <LayoutContent />
+        <LayoutFooter />
+      </Layout>
+    </Layout>
   )
 }

@@ -1,11 +1,11 @@
+import { BrowserRouter } from 'react-router-dom'
 import Layout from './layouts'
-import './app.less'
 
 function App() {
   return (
-    <div className='app'>
+    <BrowserRouter>
       <Layout />
-    </div>
+    </BrowserRouter>
   );
 }
 
