@@ -9,6 +9,7 @@ import BarChart from '@/pages/chart/BarChart'
 import ScatterChart from '@/pages/chart/ScatterChart'
 import PieChart from '@/pages/chart/PieChart'
 import LineChart from '@/pages/chart/LineChart'
+import DiyForm from '@/pages/form/diy-form/DiyForm'
 
 export interface RoutesItem {
   path: string
@@ -16,6 +17,7 @@ export interface RoutesItem {
   component: any
   meta: {
     title: string
+    icon: string
   }
   children?: RoutesItem[]
 }
@@ -27,6 +29,7 @@ export const routesModdul: RoutesItem[] = [
     component: Home,
     meta: {
       title: '首页',
+      icon: 'home'
     },
   },
   {
@@ -35,7 +38,28 @@ export const routesModdul: RoutesItem[] = [
     component: Form,
     meta: {
       title: '表单',
+      icon: 'form'
     },
+    children: [
+      {
+        path: '/form/diy',
+        name: 'DiyForm',
+        component: DiyForm,
+        meta: {
+          title: '自定义表单',
+          icon: 'form'
+        },
+      },
+      {
+        path: '/form/data',
+        name: 'DataForm',
+        component: Form,
+        meta: {
+          title: '普通表单',
+          icon: 'form'
+        },
+      }
+    ]
   },
   {
     path: '/chart',
@@ -43,6 +67,7 @@ export const routesModdul: RoutesItem[] = [
     component: Chart,
     meta: {
       title: '图表',
+      icon: 'chart'
     },
     children: [
       {
@@ -51,6 +76,7 @@ export const routesModdul: RoutesItem[] = [
         component: BarChart,
         meta: {
           title: '柱状图',
+          icon: 'chart-bar'
         },
       },
       {
@@ -59,6 +85,7 @@ export const routesModdul: RoutesItem[] = [
         component: LineChart,
         meta: {
           title: '折线图',
+          icon: 'chart-line'
         },
       },
       {
@@ -67,6 +94,7 @@ export const routesModdul: RoutesItem[] = [
         component: PieChart,
         meta: {
           title: '饼图',
+          icon: 'chart-pie'
         },
       },
       {
@@ -75,6 +103,7 @@ export const routesModdul: RoutesItem[] = [
         component: ScatterChart,
         meta: {
           title: '散点图',
+          icon: 'chart-scatter'
         },
       }
     ]
@@ -85,6 +114,7 @@ export const routesModdul: RoutesItem[] = [
     component: Table,
     meta: {
       title: '表格',
+      icon: 'table'
     },
     children: [
       {
@@ -93,6 +123,7 @@ export const routesModdul: RoutesItem[] = [
         component: GroupTable,
         meta: {
           title: '分组表格',
+          icon: 'table-group'
         },
       },
       {
@@ -101,6 +132,7 @@ export const routesModdul: RoutesItem[] = [
         component: NestTable,
         meta: {
           title: '嵌套表格',
+          icon: 'table-nest'
         },
       }
     ]
@@ -111,6 +143,7 @@ export const routesModdul: RoutesItem[] = [
     component: About,
     meta: {
       title: '关于我',
+      icon: 'about'
     },
   },
 ]

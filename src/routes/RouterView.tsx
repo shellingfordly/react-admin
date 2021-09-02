@@ -1,5 +1,5 @@
 import { routesModdul, RoutesItem } from './router'
-import { Route, RouteComponentProps, Switch } from 'react-router-dom'
+import { Redirect, Route, RouteComponentProps, Switch } from 'react-router-dom'
 import NotFind from '../components/error/NotFind'
 
 export default function RouterView(props: RouteComponentProps) {
@@ -25,6 +25,7 @@ export default function RouterView(props: RouteComponentProps) {
           component={r.component}
         />
       )}
+      <Route path='/' exact render={() => <Redirect to='/home' />} />
       <Route component={NotFind} />
     </Switch>
   )
